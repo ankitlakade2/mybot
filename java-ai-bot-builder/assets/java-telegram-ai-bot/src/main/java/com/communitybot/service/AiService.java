@@ -13,7 +13,7 @@ public class AiService {
     public AiService() {
         String apiKey = requireEnv("OPENAI_API_KEY");
         String modelName = envOrDefault("OPENAI_MODEL", OpenAiChatModelName.GPT_3_5_TURBO);
-        this.systemPrompt = envOrDefault("BOT_SYSTEM_PROMPT", DefaultPrompts.COMMUNITY_BOT_PROMPT);
+        this.systemPrompt = envOrDefault("BOT_SYSTEM_PROMPT", DefaultPrompts.RESUME_COACH_PROMPT);
 
         this.model = OpenAiChatModel.builder()
             .apiKey(apiKey)
