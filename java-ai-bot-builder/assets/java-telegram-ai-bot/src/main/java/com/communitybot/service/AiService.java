@@ -27,6 +27,10 @@ public class AiService {
         return model.generate(prompt).content().text();
     }
 
+    public String generateFromHistory(String historyPrompt) {
+        return model.generate(systemPrompt + "\n\n" + historyPrompt).content().text();
+    }
+
     private static String requireEnv(String key) {
         String value = System.getenv(key);
         if (value == null || value.isBlank()) {
