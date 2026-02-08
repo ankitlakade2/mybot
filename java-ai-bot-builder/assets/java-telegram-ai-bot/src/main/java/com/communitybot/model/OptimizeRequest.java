@@ -1,7 +1,9 @@
 package com.communitybot.model;
 
+import jakarta.validation.constraints.NotBlank;
+
 public record OptimizeRequest(
-    String jobUrl,
+    @NotBlank String jobUrl,
     String resumeUrl,
     String resumeText
 ) {}

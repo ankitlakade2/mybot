@@ -1,3 +1,5 @@
 package com.communitybot.model;
 
-public record AnalyzeRequest(String jobUrl) {}
+import jakarta.validation.constraints.NotBlank;
+
+public record AnalyzeRequest(@NotBlank String jobUrl) {}
